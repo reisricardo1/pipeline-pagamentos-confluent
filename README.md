@@ -186,3 +186,4 @@ Fonte: tela *Billing & payment* do Confluent Cloud, anexada em `docs/evidencias/
 - Dead Letter Topic (`errors.tolerance=all` + headers de contexto) em vez de deixar o conector parar
 - Materializar os tópicos como tabelas Iceberg com Tableflow
 # pipeline-pagamentos-confluent
+# pipeline-pagamentos-confluent
