@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "Transacao",
+  "namespace": "pagamentos",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "name": "conta_id",
+      "type": "long"
+    },
+    {
+      "name": "cartao_id",
+      "type": "string"
+    },
+    {
+      "name": "valor",
+      "type": "string"
+    },
+    {
+      "name": "moeda",
+      "type": "string"
+    },
+    {
+      "name": "estabelecimento",
+      "type": "string"
+    },
+    {
+      "name": "canal",
+      "type": "string"
+    }
+  ]
+}
