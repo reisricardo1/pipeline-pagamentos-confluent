@@ -185,3 +185,4 @@ Fonte: tela *Billing & payment* do Confluent Cloud, anexada em `docs/evidencias/
 - Segunda regra de fraude, com outra janela e outro critério
 - Dead Letter Topic (`errors.tolerance=all` + headers de contexto) em vez de deixar o conector parar
 - Materializar os tópicos como tabelas Iceberg com Tableflow
+# pipeline-pagamentos-confluent
