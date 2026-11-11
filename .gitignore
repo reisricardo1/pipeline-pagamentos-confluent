@@ -1,0 +1,16 @@
+# Segredos: nunca versionar
+.env
+*.pem
+*.key
+*secret*
+!.env.example
+
+# Gerados em tempo de execução
+connector/*.rendered.json
+.confluent-ids
+
+# Sistema / editor
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
