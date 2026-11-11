@@ -1,5 +1,5 @@
 # pipeline-pagamentos-confluent
-
+#
 Pipeline de pagamentos em tempo real, do banco ao alerta de fraude, rodando no Confluent Cloud.
 
 Os dados nascem em um **Postgres**, entram no Kafka por **CDC (Debezium)**, passam pelo **Flink SQL**, que enriquece cada transação com os dados da conta e aplica uma regra de fraude, e terminam em um tópico de alertas.
