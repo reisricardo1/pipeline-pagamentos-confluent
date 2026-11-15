@@ -101,7 +101,7 @@ psql "host=$PG_HOST dbname=$PG_DB user=$PG_USER" -f postgres/02-seed.sql
 **Evidência:**
 
 ```
-<sua evidência aqui: saída de `confluent environment list`, `confluent kafka cluster list` e `confluent iam service-account list`>
+< evidência : saída de `confluent environment list`, `confluent kafka cluster list` e `confluent iam service-account list`>
 ```
 
 ![ambiente e cluster](docs/evidencias/01-fundacao.png)
@@ -115,7 +115,7 @@ psql "host=$PG_HOST dbname=$PG_DB user=$PG_USER" -f postgres/02-seed.sql
 **Evidência:**
 
 ```
-<sua evidência aqui: saída do testar-compatibilidade.sh, com is_compatible=true para a v2 e is_compatible=false para a v3>
+< evidência : saída do testar-compatibilidade.sh, com is_compatible=true para a v2 e is_compatible=false para a v3>
 ```
 
 ## Camada 3 · Ingestão (CDC)
@@ -127,10 +127,10 @@ psql "host=$PG_HOST dbname=$PG_DB user=$PG_USER" -f postgres/02-seed.sql
 **Evidência:**
 
 ```
-<sua evidência aqui: evento op=c (insert) do tópico pgpag.public.transacoes>
-<sua evidência aqui: evento op=u (update), com before e after>
-<sua evidência aqui: evento op=d (delete)>
-<sua evidência aqui: status RUNNING do conector>
+< evidência : evento op=c (insert) do tópico pgpag.public.transacoes>
+< evidência : evento op=u (update), com before e after>
+< evidência : evento op=d (delete)>
+< evidência : status RUNNING do conector>
 ```
 
 ## Camada 4 · Processamento (Flink SQL)
@@ -145,8 +145,8 @@ psql "host=$PG_HOST dbname=$PG_DB user=$PG_USER" -f postgres/02-seed.sql
 **Evidência:**
 
 ```
-<sua evidência aqui: SELECT * FROM transacoes_enriquecidas LIMIT 5>
-<sua evidência aqui: rodar postgres/04-simular-fraude.sql e mostrar SELECT * FROM alertas_fraude com o cartão card-FRAUDE>
+< evidência : SELECT * FROM transacoes_enriquecidas LIMIT 5>
+< evidência : rodar postgres/04-simular-fraude.sql e mostrar SELECT * FROM alertas_fraude com o cartão card-FRAUDE>
 ```
 
 ## Camada 5 · Operação
@@ -156,20 +156,20 @@ psql "host=$PG_HOST dbname=$PG_DB user=$PG_USER" -f postgres/02-seed.sql
 **Evidência:**
 
 ```
-<sua evidência aqui: print das métricas do cluster/conector>
-<sua evidência aqui: ACLs ou role bindings listados>
-<sua evidência aqui: saída de postgres/05-monitorar-slot.sql com o wal_retido do slot>
+< evidência : print das métricas do cluster/conector>
+< evidência : ACLs ou role bindings listados>
+< evidência : saída de postgres/05-monitorar-slot.sql com o wal_retido do slot>
 ```
 
 ## Quanto custou rodar
 
 | Recurso | Tempo ligado | Custo |
 |---|---|---|
-| Cluster Kafka (basic) | `<sua evidência aqui>` | `<sua evidência aqui>` |
-| Conector CDC (1 task) | `<sua evidência aqui>` | `<sua evidência aqui>` |
-| Flink (compute pool) | `<sua evidência aqui>` | `<sua evidência aqui>` |
-| Schema Registry | `<sua evidência aqui>` | `<sua evidência aqui>` |
-| **Total** | | `<sua evidência aqui>` |
+| Cluster Kafka (basic) | `< evidência aqui>` | `< evidência aqui>` |
+| Conector CDC (1 task) | `< evidência aqui>` | `< evidência aqui>` |
+| Flink (compute pool) | `< evidência aqui>` | `< evidência aqui>` |
+| Schema Registry | `< evidência aqui>` | `< evidência aqui>` |
+| **Total** | | `< evidência aqui>` |
 
 Fonte: tela *Billing & payment* do Confluent Cloud, anexada em `docs/evidencias/custo.png`.
 
